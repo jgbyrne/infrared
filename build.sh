@@ -5,7 +5,7 @@ rm -rf ./build
 mkdir build
 
 echo "...Creating Build Templates"
-echo "...#!/bin/sh
+echo "#!/bin/sh
 kotlin -classpath ./build/infrared.jar CLASS" > ./build/kotlin.template
 
 echo "...Entering Build Directory"

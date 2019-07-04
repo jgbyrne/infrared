@@ -17,7 +17,7 @@ fun main() {
         for (x in 0 until WIDTH - 1) {
             val value = noise.eval(x / FEATURE_SIZE, y / FEATURE_SIZE, 0.0)
             println(((65793 * ((value + 1) * 127.5)) + (512 * y)).toInt())
-            val rgb = minOf(65793, ((65793 * ((value + 1) * 127.5)) + (512 * y)).toInt())
+            val rgb = maxOf(65793, ((65793 * ((value + 1) * 127.5)) + (512 * y)).toInt())
             img.setRGB(x, y, rgb)
         }
     }
